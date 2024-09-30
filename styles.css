@@ -104,7 +104,7 @@ html {
 }
 
 #user-picture {
-    max-width: 100px;  /* Set the maximum width to 100px */
+    max-width: 20px;  /* Set the maximum width to 100px */
     height: auto;      /* Maintain the aspect ratio */
     border-radius: 50%; /* Optional: makes the image circular */
     margin-top: 10px;  /* Optional: adds space above the image */
