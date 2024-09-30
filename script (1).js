@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch random user data from the API
     fetch('https://randomuser.me/api/')
         .then(response => response.json())
         .then(data => {
-            // Extract user data
             const user = data.results[0];
             const userName = `${user.name.first} ${user.name.last}`;
-            const userPicture = user.picture.medium;
+            const userPicture = user.picture.medium || 'default-image.jpg'; // Replace with your fallback image path
 
-            // Update the HTML with the random user info
             document.getElementById('user-name').textContent = userName;
             document.getElementById('user-picture').src = userPicture;
         })
         .catch(error => {
             console.error('Error fetching random user data:', error);
+            // Optionally set a default image if there's an error fetching user data
+            document.getElementById('user-picture').src = 'default-image.jpg'; // Replace with your fallback image path
         });
 });
