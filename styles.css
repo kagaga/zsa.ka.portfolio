@@ -92,3 +92,13 @@ html {
     scroll-behavior: smooth;
 }
 
+.image-gallery img {
+    max-width: 200px; 
+    height: auto;     
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1); 
+}
