@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const userName = `${user.name.first} ${user.name.last}`; // Create the full name
 
             // Set the user picture or fallback if it doesn't exist
-            const userPicture = user.picture.medium || 'fallback.jpg'; // Ensure 'fallback.jpg' is the correct path
+            const userPicture = user.picture.medium || 'randomuser.png'; // Ensure 'fallback.jpg' is the correct path
 
             // Update the HTML elements with user data
             document.getElementById('user-name').textContent = userName;
